@@ -1,0 +1,8 @@
+-o src
+-arch win32
+-noJar
+-noComp
+-runtime JNA
+-package net.heim.usbrelay
+-library usb_relay_device
+src/main/resources/usb_relay_device.h
