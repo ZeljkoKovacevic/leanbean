@@ -30,8 +30,10 @@ public class AtLight {
 			INSTANCE.usb_relay_init();
 
 			usb_relay_device_info deviceInfo = INSTANCE.usb_relay_device_enumerate();
-
+			
 			int handle = INSTANCE.usb_relay_device_open(deviceInfo);
+			
+			INSTANCE.usb_relay_device_close_all_relay_channel(handle);
 
 			INSTANCE.usb_relay_device_open_one_relay_channel(handle, atStatus);
 
